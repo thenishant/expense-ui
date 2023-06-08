@@ -7,6 +7,7 @@ const TotalExpenses = () => {
         <div className={"total-expenses"}>
             <h2>Total Expenses</h2>
             <h2>{EXPENSE_AMOUNT}</h2>
+
         </div>
     );
 }
