@@ -1,0 +1,15 @@
+.available-balance {
+    display: block;
+    padding: 10px;
+    text-align: justify;
+    margin-left: 7rem;
+}
+
+.available-balance h2 {
+
+}
+
+.available-balance h3 {
+    color: #28C1DF;
+    font-size: xx-large;
+}
