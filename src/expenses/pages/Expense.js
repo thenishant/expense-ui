@@ -1,8 +1,10 @@
 import TotalExpenses from "../components/TotalExpenses";
 
+import "./Expenses.css"
+
 const Expenses = () => {
     return (
-        <div>
+        <div className={"expenses"}>
             <TotalExpenses/>
         </div>
     )

@@ -1,0 +1,10 @@
+.main-header {
+    margin: auto;
+    padding: 1%;
+}
+
+.main-header__content{
+    position: absolute;
+    left: 53%;
+    width: 50rem;
+}
