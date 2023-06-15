@@ -1,0 +1,23 @@
+.add-category {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #191d3b;
+    padding: 10px;
+    margin: 2em 0 0 2em;
+    height: 3rem;
+    min-width: 9em;
+    border-radius: 1em;
+}
+
+
+.add-category img {
+    width: 15%;
+    height: auto;
+    margin: auto;
+}
+
+.add-category h4 {
+    width: auto;
+    margin: auto;
+}
