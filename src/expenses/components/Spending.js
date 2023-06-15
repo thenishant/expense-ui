@@ -4,9 +4,9 @@ import LineChart from "./UIElements/LineChart";
 const Spending = () => {
 
     const userData = {
-        labels: UserData.map(data => data.year)
+        labels: UserData.map(data => data.month)
         , datasets: [{
-            label: "Total Users",
+            label: "Spending this year",
             data: UserData.map(data => data.count),
             tension: 0.4,
             pointRadius: 0

@@ -4,8 +4,10 @@
     align-items: center;
     background: #191d3b;
     padding: 10px;
-    margin: 3rem 0 0 48rem;
+    margin: 2em 0 0 2em;
     height: 3rem;
+    min-width: 10em;
+    border-radius: 1em;
 }
 
 

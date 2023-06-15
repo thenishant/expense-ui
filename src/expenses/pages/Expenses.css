@@ -1,2 +1,4 @@
 .expenses {
+    display: flex;
+    flex-direction: row;
 }
