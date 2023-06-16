@@ -3,10 +3,9 @@
     justify-content: space-between;
     align-items: center;
     background: #191d3b;
-    padding: 10px;
+    padding: 1em;
     margin: 2em 0 0 2em;
-    height: 3rem;
-    min-width: 9em;
+    height: max-content;
     border-radius: 1em;
 }
 
@@ -20,4 +19,12 @@
 .add-category h4 {
     width: auto;
     margin: auto;
+}
+
+.add-category:hover {
+    background-color: #33386b;
+}
+
+.add-category a {
+    color: #FFF;
 }
