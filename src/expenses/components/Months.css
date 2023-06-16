@@ -1,7 +1,19 @@
 ul {
     list-style-type: none;
+    padding: inherit;
 }
 
 li{
-    margin: 10px 0;
+    margin: 10% 0;
+    height: max-content;
+}
+
+.all-months{
+    /*display: inline-flex;*/
+    /*justify-content: space-between;*/
+    /*align-items: center;*/
+    background: #191d3b;
+    padding: 1em;
+    height: max-content;
+    border-radius: 3em;
 }
