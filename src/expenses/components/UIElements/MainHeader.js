@@ -1,4 +1,4 @@
-import "./MianHeader.css"
+import "./MainHeader.css"
 import CurrentDate from "./CurrentDate";
 import AvailableBalance from "../AvailableBalance";
 import AddExpense from "../AddExpense";
