@@ -23,6 +23,7 @@ const PaymentMode = () => {
 
     return (
         <div className={"payment-mode"} style={{width: "400px"}}>
+            <h4>Expenses mode</h4>
             <Bar data={userData} options={options}/>
         </div>
     );

@@ -8,8 +8,10 @@ const MainHeader = () => {
     return <header className={"main-header"}>
         <div className={"main-header__content"}>
             <AvailableBalance/>
-            <AddExpense/>
-            <AddCategory/>
+            <div className={'main-header__action'}>
+                <AddExpense/>
+                <AddCategory/>
+            </div>
             <CurrentDate/>
         </div>
     </header>

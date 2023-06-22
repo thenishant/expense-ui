@@ -13,18 +13,17 @@ const AddExpense = () => {
             <Modal
                 show={addExpense}
                 onCancel={closeAddExpenseHandler}
-                header={`Add Expense header`}
+                header={`New Expense`}
                 contentClass={"add-expense__modal-content"}
                 footerClass={"add-expense__modal-actions"}
-                footer={<Button onClick={closeAddExpenseHandler}>CLOSE</Button>}>
+                footer={<Button onClick={closeAddExpenseHandler}>Add</Button>}>
                 <div className={"expense-container"}>
                     <h2>Add New Expense</h2>
                 </div>
             </Modal>
 
             <div className={"add-expense"}>
-                <img src={require('../resources/icons/211878_plus_icon.png')} alt={"add-expense-icon"}/>
-                <Button inverse onClick={openAddExpenseHandler}>Add Expense</Button>
+                <Button inverse onClick={openAddExpenseHandler}>Add New Expense</Button>
             </div>
         </React.Fragment>
     );

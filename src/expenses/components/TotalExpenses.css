@@ -4,4 +4,5 @@
     background: linear-gradient(90deg, hsla(35, 91%, 55%, 1) 0%, hsla(0, 67%, 55%, 1) 100%, hsl(5, 69%, 55%) 100%);
     border-radius: 10%;
     height: max-content;
+    color: #FFFFFF;
 }

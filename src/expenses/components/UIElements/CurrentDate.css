@@ -6,14 +6,16 @@
     padding: 10px;
     margin: 2em 0 0 2em;
     height: 3rem;
-    min-width: 10em;
+    min-width: 16%;
     border-radius: 1em;
+    color: #FFFFFF;
 }
 
 
-.current-date img {
-    width: 15%;
+.calendar-icon {
+    width: 1.5em;
     height: auto;
+    fill: currentColor;
 }
 
 .current-date h4 {

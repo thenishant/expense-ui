@@ -9,11 +9,9 @@ li{
 }
 
 .all-months{
-    /*display: inline-flex;*/
-    /*justify-content: space-between;*/
-    /*align-items: center;*/
     background: #191d3b;
     padding: 1em;
     height: max-content;
     border-radius: 3em;
+    color: #FFFFFF;
 }

@@ -1,12 +1,16 @@
 import "./CurrentDate.css"
 import moment from "moment";
+import {ReactComponent as CalendarIcon} from '../../resources/icons/calendar-icon.svg';
+
 
 const getCurrentDate = moment().format("dddd, Do MMMM, YYYY")
 
 const currentDate = () => {
     return (
         <div className={"current-date"}>
-            <img src={require('../../resources/icons/icons8-calendar-50.png')} alt={"calender-icon"}/>
+            <div className={"calendar-icon"}>
+                <CalendarIcon/>
+            </div>
             <h4>{getCurrentDate}</h4>
         </div>
     )
