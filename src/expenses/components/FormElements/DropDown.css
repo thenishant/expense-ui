@@ -1,0 +1,7 @@
+.select--default {
+    max-width: 50%;
+    height: 100%;
+    padding: 0.5rem;
+    margin: 2% 0 0 2%;
+    font-size: medium;
+}

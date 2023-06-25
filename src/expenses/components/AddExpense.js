@@ -1,7 +1,8 @@
 import "./AddExpense.css"
 import React, {useState} from "react";
 import Modal from "./UIElements/Modal";
-import Button from "./UIElements/Button";
+import Button from "./FormElements/Button";
+import AddExpenseForm from "./AddExpenseForm";
 
 const AddExpense = () => {
     const [addExpense, setAddExpense] = useState(false)
@@ -13,13 +14,11 @@ const AddExpense = () => {
             <Modal
                 show={addExpense}
                 onCancel={closeAddExpenseHandler}
-                header={`New Expense`}
+                header={`Add New Expense`}
                 contentClass={"add-expense__modal-content"}
                 footerClass={"add-expense__modal-actions"}
-                footer={<Button onClick={closeAddExpenseHandler}>Add</Button>}>
-                <div className={"expense-container"}>
-                    <h2>Add New Expense</h2>
-                </div>
+                footer={<Button onClick={closeAddExpenseHandler} disabled={true}>Add</Button>}>
+                <AddExpenseForm/>
             </Modal>
 
             <div className={"add-expense"}>
