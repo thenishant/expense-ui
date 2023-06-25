@@ -1,7 +1,39 @@
-.input {
+.form-control {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: flex-end;
+    margin: 1rem 0;
+}
+
+.form-control label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.form-control input,
+.form-control textarea {
     max-width: 50%;
     height: 100%;
     padding: 0.5rem;
     margin: 2% 0 0 2%;
     font-size: medium;
+}
+
+.form-control input:focus,
+.form-control textarea:focus {
+    outline: none;
+    background: #ebebeb;
+    border-color: #510077;
+}
+
+.form-control--invalid label,
+.form-control--invalid p {
+    color: red;
+}
+
+.form-control--invalid input,
+.form-control--invalid textarea {
+    border-color: red;
+    background: #ffd1d1;
 }

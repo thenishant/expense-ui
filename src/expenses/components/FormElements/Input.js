@@ -1,15 +1,21 @@
-import "./Input.css"
+import React from 'react';
 
-const Input = (props) => {
+import './Input.css';
+
+const Input = props => {
+    const element =
+        props.element === 'input' ? (
+            <input id={props.id} type={props.type} placeholder={props.placeholder}/>
+        ) : (
+            <textarea id={props.id} rows={props.rows || 3}/>
+        );
+
     return (
-        <input className={`input input--${props.className}`}
-               type={props.type}
-               placeholder={props.placeholder}
-               disabled={props.disabled}
-               value={props.value}>
-        </input>
+        <div className={`form-control`}>
+            <label htmlFor={props.id}>{props.label}</label>
+            {element}
+        </div>
+    );
+};
 
-    )
-}
-
-export default Input
+export default Input;
