@@ -5,9 +5,20 @@ import './Input.css';
 const Input = props => {
     const element =
         props.element === 'input' ? (
-            <input id={props.id} type={props.type} placeholder={props.placeholder}/>
+            <input
+                id={props.id}
+                type={props.type}
+                value={props.value}
+                placeholder={props.placeholder}
+                onChange={props.onChange}/>
         ) : (
-            <textarea id={props.id} rows={props.rows || 3}/>
+            <textarea
+                id={props.id}
+                type={props.type}
+                value={props.value}
+                placeholder={props.placeholder}
+                onChange={props.onChange}
+                rows={props.rows || 3}/>
         );
 
     return (

@@ -3,7 +3,8 @@ import "./DropDown.css"
 const DropDown = (props) => {
     return (
         <select
-            className={`select--${props.size || 'default'}`}>
+            className={`select--${props.size || 'default'}`}
+            onChange={props.onChange}>
             label={props.label}
             {props.children}
         </select>
