@@ -86,6 +86,7 @@ const AddExpense = () => {
                 footer={<Button onClick={closeAddExpenseHandler}>Add</Button>}>
                 <form>
                     <div className={'select-date--form'}>
+                        <label>Date</label>
                         <SelectDate
                             label={"Date"}
                             selected={() => setDate(moment().format('DD/MM/YYYY'))}
