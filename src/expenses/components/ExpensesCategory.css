@@ -5,4 +5,10 @@
     border-radius: 2em;
     margin-left: 1%;
     color: #FFFFFF;
+    display: flex;
+    align-content: stretch;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 20%;
 }
