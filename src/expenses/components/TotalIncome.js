@@ -3,36 +3,36 @@ import Card from "./UIElements/Card";
 
 import './TotalIncome.css'
 
-const TotalExpenses = () => {
+const TotalIncome = () => {
     const [responseJson, setResponseJson] = useState(null);
 
-    const totalExpenseInAMonthHandler = async () => {
+    const totalIncomeInAMonthHandler = async () => {
         const month = "Jul";
 
         try {
-            const url = new URL("http://localhost:5008/api/expense/getTotalIncomeByMonth");
+            const url = new URL("http://localhost:5008/api/expense/getTotalAmountByMonth");
             url.search = new URLSearchParams({ month }).toString();
 
             const response = await fetch(url);
             const data = await response.json();
-            setResponseJson(data);
+            setResponseJson(data["sumOfIncome"]);
         } catch (error) {
             console.error(error);
         }
     };
 
     useEffect(() => {
-        totalExpenseInAMonthHandler();
+        totalIncomeInAMonthHandler();
     }, []);
 
     return (
         <div className={'card-income'}>
             <Card
-                title={responseJson ? `₹ ${(Object.values(responseJson))}` : "Loading..."}
+                title={responseJson ? `₹ ${responseJson}` : "Loading..."}
                 description={"Income"}>
             </Card>
         </div>
     );
 };
 
-export default TotalExpenses
+export default TotalIncome
