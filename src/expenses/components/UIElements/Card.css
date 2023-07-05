@@ -1,0 +1,32 @@
+@media (min-width: 768px) {
+    .card {
+        width: 25%;
+        margin-bottom: 16px;
+    }
+}
+
+.card{
+    overflow: hidden;
+    background: #FFFFFF;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+}
+
+
+.card h2 {
+    margin-top: 10px;
+    font-family: verdana, "Roboto", "Segoe UI", "GeezaPro", "DejaVu Serif", "sans-serif";
+    font-size: 24px;
+    font-weight: 400;
+    text-align: center;
+    color: #4d80f3;
+}
+
+.card p{
+    font-family: verdana, "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-size: 13px;
+    color: #6f6f6f !important;
+    display: block;
+    text-align: center;
+    padding: 4px 0;
+}
