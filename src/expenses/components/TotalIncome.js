@@ -1,7 +1,7 @@
 import {useEffect, useState} from "react";
 import Card from "./UIElements/Card";
 
-import './TotalExpenses.css'
+import './TotalIncome.css'
 
 const TotalExpenses = () => {
     const [responseJson, setResponseJson] = useState(null);
@@ -10,7 +10,7 @@ const TotalExpenses = () => {
         const month = "Jul";
 
         try {
-            const url = new URL("http://localhost:5008/api/expense/getTotalExpenseByMonth");
+            const url = new URL("http://localhost:5008/api/expense/getTotalIncomeByMonth");
             url.search = new URLSearchParams({ month }).toString();
 
             const response = await fetch(url);
@@ -26,10 +26,10 @@ const TotalExpenses = () => {
     }, []);
 
     return (
-        <div className={'card-expense'}>
+        <div className={'card-income'}>
             <Card
                 title={responseJson ? `₹ ${(Object.values(responseJson))}` : "Loading..."}
-                description={"Expenses"}>
+                description={"Income"}>
             </Card>
         </div>
     );
