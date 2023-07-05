@@ -56,6 +56,7 @@ const ExpensesCategory = () => {
             <h4>Expenses by category</h4>
                 <select
                     id="month-select"
+                    title={"month-select"}
                     value={selectedMonth}
                     onChange={handleMonthChange}>
                     <option value="Jan">January</option>
