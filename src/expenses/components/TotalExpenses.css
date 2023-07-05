@@ -1,8 +1,5 @@
-.total-expenses {
-    margin: 1%;
-    padding: 1%;
-    background: linear-gradient(90deg, hsla(35, 91%, 55%, 1) 0%, hsla(0, 67%, 55%, 1) 100%, hsl(5, 69%, 55%) 100%);
-    border-radius: 10%;
-    height: max-content;
-    color: #FFFFFF;
+.card-income,
+.card-expense {
+    flex: 1;
+    margin: 10px;
 }

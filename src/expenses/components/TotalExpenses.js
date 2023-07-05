@@ -1,5 +1,7 @@
-import './TotalExpenses.css'
 import {useEffect, useState} from "react";
+import Card from "./UIElements/Card";
+
+import './TotalExpenses.css'
 
 const TotalExpenses = () => {
     const [responseJson, setResponseJson] = useState(null);
@@ -24,9 +26,11 @@ const TotalExpenses = () => {
     }, []);
 
     return (
-        <div className="total-expenses">
-            <h2>Total Expenses</h2>
-            <h2>{responseJson ? `₹ ${(Object.values(responseJson))}` : "Loading..."}</h2>
+        <div className={'card-income'}>
+            <Card
+                title={responseJson ? `₹ ${(Object.values(responseJson))}` : "Loading..."}
+                description={"Expenses"}>
+            </Card>
         </div>
     );
 };

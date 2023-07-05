@@ -10,7 +10,6 @@ const Expenses = () => {
     return (
         <div className={"expenses"}>
             <Months/>
-            <TotalExpenses/>
             <Spending/>
             <ExpensesCategory/>
             <PaymentMode/>
