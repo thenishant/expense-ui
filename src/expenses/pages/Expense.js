@@ -1,5 +1,3 @@
-import TotalExpenses from "../components/TotalExpenses";
-
 import "./Expenses.css"
 import Spending from "../components/Spending";
 import ExpensesCategory from "../components/ExpensesCategory";
