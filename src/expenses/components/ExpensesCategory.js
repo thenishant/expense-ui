@@ -5,9 +5,9 @@ import ReactECharts from 'echarts-for-react';
 const ExpensesCategory = () => {
     const [expenseCategory, setExpenseCategory] = useState([]);
     // const [selectedMonth, setSelectedMonth] = useState("");
+    const month = "May"
     const expenseCategoryHandler = async () => {
-        const month = "Jul"
-        const url = new URL("http://localhost:5008/api/expense/getMonthlyExpenseByCategory");
+        const url = new URL("http://localhost:5008/api/expense/getExpenses");
         url.search = new URLSearchParams({month}).toString();
 
         try {
@@ -15,7 +15,7 @@ const ExpensesCategory = () => {
             const data = await response.json();
             setExpenseCategory(data);
         } catch (error) {
-            console.error(error);
+            // console.error(error);
         }
     };
 
@@ -23,8 +23,7 @@ const ExpensesCategory = () => {
         expenseCategoryHandler();
     }, []);
 
-
-    const transformedData = expenseCategory.map(item => ({
+    const transformedData = expenseCategory?.[month]?.Expenses?.map(item => ({
         name: item.category,
         value: item.amount
     }));
@@ -56,7 +55,6 @@ const ExpensesCategory = () => {
                 type: 'pie',
                 radius: '75%',
                 data: transformedData,
-
             }
         ]
     };
