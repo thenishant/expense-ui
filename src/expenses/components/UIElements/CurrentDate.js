@@ -5,7 +5,7 @@ import {ReactComponent as CalendarIcon} from '../../resources/icons/calendar-ico
 
 const getCurrentDate = moment().format("dddd, Do MMMM, YYYY")
 
-const currentDate = () => {
+const CurrentDate = () => {
     return (
         <div className={"current-date"}>
             <div className={"calendar-icon"}>
@@ -16,4 +16,4 @@ const currentDate = () => {
     )
 }
 
-export default currentDate
+export default CurrentDate
