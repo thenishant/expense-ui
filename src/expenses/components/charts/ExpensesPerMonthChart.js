@@ -7,7 +7,7 @@ const ExpensesPerMonthChart = () => {
     // const [selectedMonth, setSelectedMonth] = useState("");
     const month = "Jul"
     const expenseCategoryHandler = async () => {
-        const url = new URL("http://localhost:5008/api/expense/getExpenses");
+        const url = new URL("http://localhost:5008/api/expense/getMonthlyTransactions");
         url.search = new URLSearchParams({month}).toString();
 
         try {
@@ -15,7 +15,7 @@ const ExpensesPerMonthChart = () => {
             const data = await response.json();
             setExpenseCategory(data);
         } catch (error) {
-            // console.error(error);
+            console.error(error);
         }
     };
 
