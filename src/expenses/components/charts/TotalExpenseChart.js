@@ -22,19 +22,18 @@ const TotalExpenseChart = () => {
         totalExpenseChartHandler();
     }, []);
 
-    console.log(totalExpenseChart.map(data => data.amount))
     const option = {
         xAxis: {
             type: 'category',
             boundaryGap: false,
-            data: totalExpenseChart.map(data => data.month)
+            data: totalExpenseChart.map(data => data?.month)
         },
         yAxis: {
             type: 'value'
         },
         series: [
             {
-                data: totalExpenseChart.map(data => data.amount),
+                data: totalExpenseChart.map(data => data?.expense),
                 type: 'line',
                 areaStyle: {},
                 tooltip:true
