@@ -1,11 +1,11 @@
-import "./ExpensesCategory.css"
+import "./ExpensesCategoryPerMonth.css"
 import React, {useEffect, useState} from 'react';
 import ReactECharts from 'echarts-for-react';
 
-const ExpensesCategory = () => {
+const ExpensesCategoryPerMonth = () => {
     const [expenseCategory, setExpenseCategory] = useState([]);
     // const [selectedMonth, setSelectedMonth] = useState("");
-    const month = "May"
+    const month = "Jul"
     const expenseCategoryHandler = async () => {
         const url = new URL("http://localhost:5008/api/expense/getExpenses");
         url.search = new URLSearchParams({month}).toString();
@@ -60,7 +60,7 @@ const ExpensesCategory = () => {
     };
 
     return (
-        <div className={'total-expense-chart'}>
+        <div className={'monthly-expense-chart'}>
             <ReactECharts
                 option={option}
             />
@@ -68,4 +68,4 @@ const ExpensesCategory = () => {
 
     )
 }
-export default ExpensesCategory
+export default ExpensesCategoryPerMonth
