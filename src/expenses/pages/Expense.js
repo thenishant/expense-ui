@@ -1,18 +1,20 @@
 import "./Expenses.css"
-import Spending from "../components/Spending";
 import ExpensesPerMonthChart from "../components/charts/ExpensesPerMonthChart";
-import PaymentMode from "../components/PaymentMode";
 import Months from "../components/Months";
 import TotalExpenseChart from "../components/charts/TotalExpenseChart";
+import IncomeVsExpenseChart from "../components/charts/IncomeVsExpenseCharts";
 
 const Expenses = () => {
     return (
-        <div className={"expenses"}>
+        <div className="expenses">
             <Months/>
-            {/*<Spending/>*/}
-            <ExpensesPerMonthChart/>
-            <TotalExpenseChart/>
-            {/*<PaymentMode/>*/}
+            <div className="chart-container">
+                <ExpensesPerMonthChart/>
+                <IncomeVsExpenseChart/>
+            </div>
+            <div className="sub-chart-container">
+                <TotalExpenseChart/>
+            </div>
         </div>
     )
 }
