@@ -1,3 +1,4 @@
 .page {
-    background: linear-gradient(-141deg, #EEF5F7 14%, #EEF2FB 100%)
+    background: linear-gradient(-141deg, #EEF5F7 14%, #EEF2FB 100%);
+    max-width: 100%;
 }
