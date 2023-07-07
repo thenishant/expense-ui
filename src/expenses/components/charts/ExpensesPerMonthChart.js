@@ -1,8 +1,8 @@
-import "./ExpensesCategoryPerMonth.css"
+import "./ExpensesPerMonthChart.css"
 import React, {useEffect, useState} from 'react';
 import ReactECharts from 'echarts-for-react';
 
-const ExpensesCategoryPerMonth = () => {
+const ExpensesPerMonthChart = () => {
     const [expenseCategory, setExpenseCategory] = useState([]);
     // const [selectedMonth, setSelectedMonth] = useState("");
     const month = "Jul"
@@ -68,4 +68,4 @@ const ExpensesCategoryPerMonth = () => {
 
     )
 }
-export default ExpensesCategoryPerMonth
+export default ExpensesPerMonthChart

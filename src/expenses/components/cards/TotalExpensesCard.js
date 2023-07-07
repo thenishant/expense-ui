@@ -1,12 +1,12 @@
 import {useEffect, useState} from "react";
-import Card from "./UIElements/Card";
+import Card from "../UIElements/Card";
 
-import './TotalIncome.css'
+import './TotalExpensesCard.css'
 
-const TotalIncome = () => {
+const TotalExpensesCard = () => {
     const [responseJson, setResponseJson] = useState(null);
 
-    const totalIncomeInAMonthHandler = async () => {
+    const totalExpenseInAMonthHandler = async () => {
         const month = "Jul";
 
         try {
@@ -15,24 +15,24 @@ const TotalIncome = () => {
 
             const response = await fetch(url);
             const data = await response.json();
-            setResponseJson(data["sumOfIncome"]);
+            setResponseJson(data["sumOfExpense"]);
         } catch (error) {
             console.error(error);
         }
     };
 
     useEffect(() => {
-        totalIncomeInAMonthHandler();
+        totalExpenseInAMonthHandler();
     }, []);
 
     return (
-        <div className={'card-income'}>
+        <div className={'total-expense-card'}>
             <Card
                 title={responseJson ? `₹ ${responseJson}` : "Loading..."}
-                description={"Income"}>
+                description={"Expenses"}>
             </Card>
         </div>
     );
 };
 
-export default TotalIncome
+export default TotalExpensesCard

@@ -1,7 +1,7 @@
 import './TransactionHeader.css'
-import TotalExpensesCard from "./TotalExpensesCard";
-import TotalIncome from "./TotalIncome";
-import TotalBalance from "./TotalBalance";
+import TotalExpensesCard from "./cards/TotalExpensesCard";
+import TotalIncomeCard from "./cards/TotalIncomeCard";
+import TotalBalanceCard from "./cards/TotalBalanceCard";
 import AddExpense from "./AddExpense";
 import AddCategory from "./AddCategory";
 import CurrentDate from "./UIElements/CurrentDate";
@@ -11,8 +11,8 @@ const TransactionHeader = () => {
         <div className={"transaction-header"}>
             <div className="card-container">
                 <TotalExpensesCard/>
-                <TotalIncome/>
-                <TotalBalance/>
+                <TotalIncomeCard/>
+                <TotalBalanceCard/>
             </div>
             <div className={'header-button'}>
                 <AddExpense/>
