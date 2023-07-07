@@ -1,5 +1,5 @@
 import './TransactionHeader.css'
-import TotalExpenses from "./TotalExpenses";
+import TotalExpensesCard from "./TotalExpensesCard";
 import TotalIncome from "./TotalIncome";
 import TotalBalance from "./TotalBalance";
 import AddExpense from "./AddExpense";
@@ -10,7 +10,7 @@ const TransactionHeader = () => {
     return (
         <div className={"transaction-header"}>
             <div className="card-container">
-                <TotalExpenses/>
+                <TotalExpensesCard/>
                 <TotalIncome/>
                 <TotalBalance/>
             </div>

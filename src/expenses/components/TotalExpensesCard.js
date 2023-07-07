@@ -1,9 +1,9 @@
 import {useEffect, useState} from "react";
 import Card from "./UIElements/Card";
 
-import './TotalExpenses.css'
+import './TotalExpensesCard.css'
 
-const TotalExpenses = () => {
+const TotalExpensesCard = () => {
     const [responseJson, setResponseJson] = useState(null);
 
     const totalExpenseInAMonthHandler = async () => {
@@ -26,7 +26,7 @@ const TotalExpenses = () => {
     }, []);
 
     return (
-        <div className={'card-expense'}>
+        <div className={'total-expense-card'}>
             <Card
                 title={responseJson ? `₹ ${responseJson}` : "Loading..."}
                 description={"Expenses"}>
@@ -35,4 +35,4 @@ const TotalExpenses = () => {
     );
 };
 
-export default TotalExpenses
+export default TotalExpensesCard
