@@ -29,8 +29,6 @@ const PaymentModePerMonthChart = () => {
         value: item.amount
     }));
 
-    console.log(transformedData)
-
     const option = {
         title: {
             text: 'Payment Mode',
