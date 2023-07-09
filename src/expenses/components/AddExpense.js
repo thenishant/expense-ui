@@ -36,35 +36,44 @@ const AddExpense = () => {
         getCategoriesHandler();
     }, []);
 
-    const categoryType = <div className={"select-categoryType-form"}>
-        <label>Category</label>
-        <DropDown
-            className={'select-dropdown'}
-            onChange={(e) => setCategoryState(e.target.value)}
-            label={"Choose a categoryType"}
-            value={categoryState}>
-            <Option selected value=""/>
-            <Option value="Category 1"/>
-            <Option value="Category 2"/>
-            <Option value="Category 3"/>
-        </DropDown>
-    </div>;
+    console.log(getCategories.category[typeState])
 
-    const itemType = <div className={"select itemType"}>
-        <label>Type</label>
-        <DropDown
-            className={'select-dropdown'}
-            onChange={(e) => setTypeState(e.target.value)}
-            label={"Choose a categoryType"}
-            value={amountState}>
-            <Option selected value=""/>
-            {Object.keys(getCategories?.category).map((category) => (
-                <option value={category}>
-                    {category}
-                </option>
-            ))}
-        </DropDown>
-    </div>;
+    const itemType = (
+        <div className="select itemType">
+            <label>Type</label>
+            <DropDown
+                className="select-dropdown"
+                onChange={(e) => setTypeState(e.target.value)}
+                label="Choose the Type"
+                value={typeState}>
+                <Option selected value=""/>
+                {getCategories?.category &&
+                    Object.keys(getCategories?.category).map((category) => (
+                        <Option key={category} value={category}>
+                            {category}
+                        </Option>
+                    ))}
+            </DropDown>
+        </div>
+    );
+
+    const categoryType = (
+        <div className="select-categoryType-form">
+            <label>Category</label>
+            <DropDown
+                className="select-dropdown"
+                onChange={(e) => setCategoryState(e.target.value)}
+                label="Choose the Category"
+                value={categoryState}>
+                {typeState && getCategories?.category[typeState]?.map((item) => (
+                    <Option value={item.category}>
+                        {item.category}
+                    </Option>
+                ))}
+            </DropDown>
+        </div>
+    );
+
 
     const createExpenseHandler = async event => {
         event.preventDefault()
