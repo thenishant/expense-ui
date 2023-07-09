@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import Modal from "./UIElements/Modal";
 import Button from "./FormElements/Button";
 import DropDown, {Option} from "./FormElements/DropDown";
@@ -9,22 +9,39 @@ import "./AddExpense.css"
 import moment from "moment";
 
 const AddExpense = () => {
-    const [dateState, setDate] = useState("");
-    const [typeState, setType] = useState("");
-    const [categoryState, setCategory] = useState("");
-    const [amountState, setAmount] = useState("");
-    const [descState, setDesc] = useState("");
+    const [dateState, setDateState] = useState("");
+    const [typeState, setTypeState] = useState("");
+    const [categoryState, setCategoryState] = useState("");
+    const [amountState, setAmountState] = useState("");
+    const [descState, setDescState] = useState("");
 
     const [addExpense, setAddExpense] = useState(false)
     const openAddExpenseHandler = () => setAddExpense(true)
     const closeAddExpenseHandler = () => setAddExpense(false)
 
-    const category = <div className={"select-category-form"}>
+    const [getCategories, setGetCategories] = useState([]);
+    const getCategoriesHandler = async () => {
+        const url = new URL("http://localhost:5008/api/category/getAllCategories");
+
+        try {
+            const response = await fetch(url);
+            const data = await response.json();
+            setGetCategories(data);
+        } catch (error) {
+            console.error(error);
+        }
+    };
+
+    useEffect(() => {
+        getCategoriesHandler();
+    }, []);
+
+    const categoryType = <div className={"select-categoryType-form"}>
         <label>Category</label>
         <DropDown
             className={'select-dropdown'}
-            onChange={(e) => setCategory(e.target.value)}
-            label={"Choose a category"}
+            onChange={(e) => setCategoryState(e.target.value)}
+            label={"Choose a categoryType"}
             value={categoryState}>
             <Option selected value=""/>
             <Option value="Category 1"/>
@@ -33,18 +50,19 @@ const AddExpense = () => {
         </DropDown>
     </div>;
 
-
     const itemType = <div className={"select itemType"}>
         <label>Type</label>
         <DropDown
             className={'select-dropdown'}
-            onChange={(e) => setType(e.target.value)}
-            label={"Choose a category"}
+            onChange={(e) => setTypeState(e.target.value)}
+            label={"Choose a categoryType"}
             value={amountState}>
             <Option selected value=""/>
-            <Option value="Type 1"/>
-            <Option value="Type 2"/>
-            <Option value="Type 3"/>
+            {Object.keys(getCategories?.category).map((category) => (
+                <option value={category}>
+                    {category}
+                </option>
+            ))}
         </DropDown>
     </div>;
 
@@ -75,7 +93,6 @@ const AddExpense = () => {
 
     return (
         <React.Fragment>
-
             <Modal
                 show={addExpense}
                 onCancel={closeAddExpenseHandler}
@@ -89,19 +106,19 @@ const AddExpense = () => {
                         <label>Date</label>
                         <SelectDate
                             label={"Date"}
-                            selected={() => setDate(moment().format('DD/MM/YYYY'))}
-                            onChange={() => setDate(moment().format('DD/MM/YYYY'))}
+                            selected={() => setDateState(moment().format('DD/MM/YYYY'))}
+                            onChange={() => setDateState(moment().format('DD/MM/YYYY'))}
                             value={dateState}/>
                     </div>
-                    {category}
                     {itemType}
+                    {categoryType}
                     <div className={"input-amount"}>
                         <Input
                             element="input"
                             type="number"
                             label="Amount"
                             value={amountState}
-                            onChange={(e) => setAmount(e.target.value)}/>
+                            onChange={(e) => setAmountState(e.target.value)}/>
                     </div>
                     <div className={"input-desc"}>
                         <Input
@@ -109,7 +126,7 @@ const AddExpense = () => {
                             type="text"
                             label="Description"
                             value={descState}
-                            onChange={(e) => setDesc(e.target.value)}/>
+                            onChange={(e) => setDescState(e.target.value)}/>
                     </div>
                 </form>
             </Modal>
