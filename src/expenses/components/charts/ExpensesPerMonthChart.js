@@ -42,7 +42,8 @@ const ExpensesPerMonthChart = () => {
             }
         },
         tooltip: {
-            trigger: 'item'
+            trigger: 'item',
+            formatter: '{a} <br/>{b} : {c} ({d}%)'
         },
         legend: {
             orient: 'vertical',
@@ -52,6 +53,7 @@ const ExpensesPerMonthChart = () => {
         },
         series: [
             {
+                name: 'Expense',
                 type: 'pie',
                 radius: '75%',
                 data: transformedData,

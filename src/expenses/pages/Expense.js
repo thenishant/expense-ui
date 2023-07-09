@@ -3,6 +3,7 @@ import ExpensesPerMonthChart from "../components/charts/ExpensesPerMonthChart";
 import Months from "../components/Months";
 import TotalExpenseChart from "../components/charts/TotalExpenseChart";
 import IncomeVsExpenseChart from "../components/charts/IncomeVsExpenseCharts";
+import PaymentModePerMonthChart from "../components/charts/PaymentModePerMonthChart";
 
 const Expenses = () => {
     return (
@@ -14,6 +15,7 @@ const Expenses = () => {
             </div>
             <div className="sub-chart-container">
                 <TotalExpenseChart/>
+                <PaymentModePerMonthChart/>
             </div>
         </div>
     )
