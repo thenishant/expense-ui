@@ -36,8 +36,6 @@ const AddExpense = () => {
         getCategoriesHandler();
     }, []);
 
-    console.log(getCategories.category[typeState])
-
     const itemType = (
         <div className="select itemType">
             <label>Type</label>
