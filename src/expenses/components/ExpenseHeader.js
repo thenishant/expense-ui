@@ -1,4 +1,4 @@
-import './TransactionHeader.css'
+import './ExpenseHeader.css'
 import TotalExpensesCard from "./cards/TotalExpensesCard";
 import TotalIncomeCard from "./cards/TotalIncomeCard";
 import TotalBalanceCard from "./cards/TotalBalanceCard";
@@ -6,7 +6,7 @@ import AddExpense from "./AddExpense";
 import AddCategory from "./AddCategory";
 import CurrentDate from "./UIElements/CurrentDate";
 
-const TransactionHeader = () => {
+const ExpenseHeader = () => {
     return (
         <div className={"transaction-header"}>
             <div className="card-container">
@@ -23,4 +23,4 @@ const TransactionHeader = () => {
     )
 }
 
-export default TransactionHeader
+export default ExpenseHeader
