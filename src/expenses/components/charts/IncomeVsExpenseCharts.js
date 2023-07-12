@@ -6,7 +6,7 @@ import ReactECharts from 'echarts-for-react';
 const IncomeVsExpenseChart = () => {
     const [incomeVsExpense, setIncomeVsExpense] = useState([]);
     const incomeVsExpenseChartHandler = async () => {
-        const url = new URL(`${process.env.REACT_APP_EXPENSE_URL}/expense/}/monthlyExpense`);
+        const url = new URL(`${process.env.REACT_APP_EXPENSE_URL}/expense/monthlyExpense`);
 
         try {
             const response = await fetch(url);

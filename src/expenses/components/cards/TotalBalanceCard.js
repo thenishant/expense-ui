@@ -10,7 +10,7 @@ const TotalBalanceCard = () => {
         const month = "Jul";
 
         try {
-            const url = new URL(`${process.env.REACT_APP_EXPENSE_URL}/expense/}/getTotalAmountByMonth`);
+            const url = new URL(`${process.env.REACT_APP_EXPENSE_URL}/expense/getTotalAmountByMonth`);
             url.search = new URLSearchParams({ month }).toString();
 
             const response = await fetch(url);

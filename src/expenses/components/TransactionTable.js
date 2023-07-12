@@ -12,7 +12,7 @@ const TransactionTable = () => {
         const month = "Jul";
 
         try {
-            const url = new URL(`${process.env.REACT_APP_EXPENSE_URL}/expense/}/getAllTransactionsForAMonth`);
+            const url = new URL(`${process.env.REACT_APP_EXPENSE_URL}/expense/getAllTransactionsForAMonth`);
             url.search = new URLSearchParams({month}).toString();
 
             const response = await fetch(url);

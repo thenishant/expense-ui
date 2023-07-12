@@ -7,7 +7,7 @@ const ExpensesPerMonthChart = () => {
     // const [selectedMonth, setSelectedMonth] = useState("");
     const month = "Jul"
     const expenseCategoryHandler = async () => {
-        const url = new URL(`${process.env.REACT_APP_EXPENSE_URL}/expense/}/getMonthlyTransactions`);
+        const url = new URL(`${process.env.REACT_APP_EXPENSE_URL}/expense/getMonthlyTransactions`);
         url.search = new URLSearchParams({month}).toString();
 
         try {
