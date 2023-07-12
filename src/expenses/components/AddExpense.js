@@ -77,7 +77,7 @@ const AddExpense = () => {
         event.preventDefault()
 
         try {
-            const response = await fetch(`${process.env.REACT_APP_EXPENSE_URL}/create`, {
+            const response = await fetch(`${process.env.REACT_APP_EXPENSE_URL}/expense/}/create`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

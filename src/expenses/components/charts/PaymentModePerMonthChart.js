@@ -7,7 +7,7 @@ const PaymentModePerMonthChart = () => {
     // const [selectedMonth, setSelectedMonth] = useState("");
     const month = "Jul"
     const paymentModePerMonthChartHandler = async () => {
-        const url = new URL(`${process.env.REACT_APP_EXPENSE_URL}/getPaymentModeForExpenseForAMonth`);
+        const url = new URL(`${process.env.REACT_APP_EXPENSE_URL}/expense/}/getPaymentModeForExpenseForAMonth`);
         url.search = new URLSearchParams({month}).toString();
 
         try {

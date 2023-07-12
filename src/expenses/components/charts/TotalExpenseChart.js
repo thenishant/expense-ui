@@ -9,7 +9,7 @@ const TotalExpenseChart = () => {
     const totalExpenseChartHandler = async () => {
 
         try {
-            const url = new URL(`${process.env.REACT_APP_EXPENSE_URL}/monthlyExpense`);
+            const url = new URL(`${process.env.REACT_APP_EXPENSE_URL}/expense/}/monthlyExpense`);
             const response = await fetch(url);
             const data = await response.json();
             setTotalExpenseChart(data);
