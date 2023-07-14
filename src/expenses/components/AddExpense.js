@@ -21,7 +21,7 @@ const AddExpense = () => {
 
     const [getCategories, setGetCategories] = useState([]);
     const getCategoriesHandler = async () => {
-        const url = new URL("http://localhost:5008/api/category/getAllCategories");
+        const url = new URL(`${process.env.REACT_APP_EXPENSE_URL}/category/getAllCategories`);
 
         try {
             const response = await fetch(url);
@@ -77,7 +77,7 @@ const AddExpense = () => {
         event.preventDefault()
 
         try {
-            const response = await fetch("http://localhost:5008/api/expense/create", {
+            const response = await fetch(`${process.env.REACT_APP_EXPENSE_URL}/expense/}/create`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

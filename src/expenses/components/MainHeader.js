@@ -6,7 +6,7 @@ const MainHeader = () => {
     return (
         <div className={"dashboard-header"}>
             <div className={'dashboard-button'}>
-                <Link to={""}>
+                <Link to={"/"}>
                     <Button>Dashboard</Button>
                 </Link>
                 <Link to={"/transactions"}>

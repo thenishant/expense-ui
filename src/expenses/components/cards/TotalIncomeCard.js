@@ -10,7 +10,7 @@ const TotalIncomeCard = () => {
         const month = "Jul";
 
         try {
-            const url = new URL("http://localhost:5008/api/expense/getTotalAmountByMonth");
+            const url = new URL(`${process.env.REACT_APP_EXPENSE_URL}/expense/getTotalAmountByMonth`);
             url.search = new URLSearchParams({ month }).toString();
 
             const response = await fetch(url);
