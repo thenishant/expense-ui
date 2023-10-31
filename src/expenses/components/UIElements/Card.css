@@ -1,0 +1,45 @@
+@media (max-width: 768px) {
+    .card {
+        overflow: hidden;
+        background: #FFFFFF;
+        box-shadow: 0 2em 2em 0 rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        width: 10em;
+    }
+}
+
+.card {
+    overflow: hidden;
+    background: #FFFFFF;
+    box-shadow: 0 2em 2em 0 rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    width: 10em;
+}
+
+/*.card {*/
+/*    overflow: hidden;*/
+/*    background: #FFFFFF;*/
+/*    box-shadow: 0 2em 2em 0 rgba(0, 0, 0, 0.1);*/
+/*    border-radius: 37px;*/
+/*    width: 13em;*/
+/*}*/
+
+
+.card h2 {
+    font-family: verdana, "Roboto", "Segoe UI", "GeezaPro", "DejaVu Serif", "sans-serif";
+    /*font-size: 24px;*/
+    /*font-weight: 400;*/
+    text-align: center;
+    color: #4d80f3;
+    /*font-weight: bold;*/
+    font-size: x-large;
+}
+
+.card p {
+    font-family: verdana, "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-size: 13px;
+    color: #6f6f6f !important;
+    display: block;
+    text-align: center;
+    padding: 4px 0;
+}

@@ -1,0 +1,36 @@
+.expenses {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+    margin: 0 0 0 0;
+}
+
+.chart-container {
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+}
+
+.sub-chart-container {
+    display: flex;
+    flex-direction: column;
+    min-width: 45em;
+    max-width: 50em;
+    height: 400px;
+}
+
+@media (max-width: 767px) {
+    .chart-container {
+        display: flex;
+        flex-direction: column;
+        height: 400px;
+        width: 100%;
+    }
+
+    .expenses {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 20px;
+    }
+}
+

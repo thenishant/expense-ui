@@ -1,0 +1,36 @@
+.dashboard-button {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: center;
+    align-content: center;
+    height: inherit;
+}
+
+.dashboard-header {
+    background: white;
+    border-radius: 14px;
+    height: 3em;
+    box-shadow: 0 6px 3px 0 rgba(0, 0, 0, 0.1);
+    max-width: 80%;
+    margin: auto;
+}
+
+@media (max-width: 767px) {
+    .dashboard-header {
+        padding: 10px;
+        text-align: center;
+    }
+
+    .dashboard-button {
+        display: flex;
+        flex-wrap: nowrap;
+        height: auto;
+        width: fit-content;
+        justify-content: center;
+    }
+
+    .dashboard-button a {
+        padding: 0.4em 0 0 0;
+    }
+}

@@ -1,0 +1,31 @@
+.form-control {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.form-control input,
+.form-control textarea {
+    width: 70%;
+    padding: 2%;
+    font-size: large;
+}
+
+.form-control input:focus,
+.form-control textarea:focus {
+    outline: none;
+    background: #ebebeb;
+    border-color: #510077;
+}
+
+.form-control--invalid label,
+.form-control--invalid p {
+    color: red;
+}
+
+.form-control--invalid input,
+.form-control--invalid textarea {
+    border-color: red;
+    background: #ffd1d1;
+}

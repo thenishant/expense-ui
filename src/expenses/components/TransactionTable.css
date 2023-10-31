@@ -1,0 +1,22 @@
+.red-text {
+    color: red;
+    font-weight: bold;
+}
+
+.green-text {
+    color: green;
+    font-weight: bold;
+}
+
+.transaction-table{
+    margin: auto;
+    padding: 1em;
+    width: fit-content;
+}
+
+@media (max-width: 768px) {
+    .transaction-table {
+        padding: 2%;
+        width: 100%;
+    }
+}
