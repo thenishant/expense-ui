@@ -29,7 +29,7 @@ const TransactionTable = () => {
     }, []);
 
     useEffect(() => {
-        if (data) {
+        if (Array.isArray(data)) {  // Check if data is an array
             let currentId = 1;
             const updatedRows = data.map((item) => ({
                 id: currentId++,
