@@ -7,7 +7,6 @@ const apiEndpoints = {
     createExpense: '/expense/create',
     createCategory: '/category/new',
     paymentMode: '/expense/getPaymentModeForExpenseForAMonth',
-    totalAmount: '/expense/getTotalAmountByMonth',
     monthlyTransactions: '/expense/getMonthlyTransactions',
 };
 

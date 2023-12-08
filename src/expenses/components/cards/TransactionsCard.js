@@ -14,7 +14,7 @@ const TransactionsCard = () => {
 
             const response = await fetch(url);
             const data = await response.json();
-            setResponseJson(data.length);
+            setResponseJson(data["allExpenses"].length);
         } catch (error) {
             console.error(error);
         }

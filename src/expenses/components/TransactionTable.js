@@ -18,7 +18,7 @@ const TransactionTable = () => {
 
             const response = await fetch(url);
             const data = await response.json();
-            setData(data);
+            setData(data["allExpenses"]);
         } catch (error) {
             console.error(error);
         }

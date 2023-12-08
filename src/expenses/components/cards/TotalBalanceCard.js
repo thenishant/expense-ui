@@ -10,7 +10,7 @@ const TotalBalanceCard = () => {
     const totalBalanceInAMonthHandler = async () => {
 
         try {
-            const url = new URL(`${process.env.REACT_APP_EXPENSE_URL + apiEndpoints.totalAmount}`);
+            const url = new URL(`${process.env.REACT_APP_EXPENSE_URL + apiEndpoints.transactionsInAMonth}`);
             url.search = new URLSearchParams(month()).toString();
 
             const response = await fetch(url);
